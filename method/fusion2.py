@@ -97,8 +97,8 @@ def testPlot(org1,org2,img):
 if __name__=='__main__':
     ###### 加载图像
     load_image_start = time()
-    img1=imgOpen('/data/yujsh/xiaoxiannv/fusion16/dataset16/0_7.tif')
-    img2=imgOpen('/data/yujsh/xiaoxiannv/fusion16/dataset16/0_5.tif')
+    img1=imgOpen('/data/yujsh/xiaoxiannv/fusion/dataset16/0_7.tif')
+    img2=imgOpen('/data/yujsh/xiaoxiannv/fusion/dataset16/0_5.tif')
     load_image_end = time()
     print("load image time: ",load_image_end - load_image_start)
     ####### 融合
@@ -108,6 +108,6 @@ if __name__=='__main__':
     print("fusion time: ", fusion_end_time - fusion_start_time)
     ####### 存图像
     write_start_time = time()
-    cv2.imwrite("/data/yujsh/xiaoxiannv/fusion16/test_result/fusion/fusion2_0.tif", rec.astype(np.uint16))
+    cv2.imwrite("/data/yujsh/xiaoxiannv/fusion/test_result/fusion/fusion2_0.tif", rec.astype(np.uint16))
     write_end_time = time()
     print('imwrite time: ',write_end_time - write_start_time)

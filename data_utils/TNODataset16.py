@@ -8,7 +8,7 @@ import os, sys
 import cv2
 import numpy as np
 
-sys.path.append('/data/yujsh/xiaoxiannv/fusion16')
+sys.path.append('/data/yujsh/xiaoxiannv/fusion')
 
 class TNODataset(Dataset):
     def __init__(self, root, device_id=-1, ):
@@ -30,7 +30,7 @@ class TNODataset(Dataset):
         return len(self.imgs_r)
 
 if __name__ == '__main__':
-    dataset = TNODataset('/data/yujsh/xiaoxiannv/fusion16/dataset16/train_dataset')
+    dataset = TNODataset('/data/yujsh/xiaoxiannv/fusion/dataset16/train_dataset')
     print(f'dataset length : {len(dataset)}')
     for data in dataset:
         if data.shape[1] == 3:

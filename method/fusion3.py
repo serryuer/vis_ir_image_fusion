@@ -1,7 +1,7 @@
 # import cv2
 # import numpy as np
-# A = cv2.imread('/data/yujsh/xiaoxiannv/fusion16/dataset16/0_7.tif',-1).astype(np.float64)
-# B = cv2.imread('/data/yujsh/xiaoxiannv/fusion16/dataset16/0_5.tif',-1).astype(np.float64)
+# A = cv2.imread('/data/yujsh/xiaoxiannv/fusion/dataset16/0_7.tif',-1).astype(np.float64)
+# B = cv2.imread('/data/yujsh/xiaoxiannv/fusion/dataset16/0_5.tif',-1).astype(np.float64)
 # # generate Gaussian pyramid for A
 # G = A.copy()
 # gpA = [G]
@@ -42,15 +42,15 @@
 #     ls_ = cv2.add(ls_, LS[i])                #采用金字塔拼接方法的图像
 # # image with direct connecting each half
 # real = np.hstack((A[:,:cols/2],B[:,cols/2:]))   #直接的拼接
-# cv2.imwrite('/data/yujsh/xiaoxiannv/fusion16/test_result/fusion/3_0_p.tif',ls_rec.astype(np.uint16))
-# cv2.imwrite('/data/yujsh/xiaoxiannv/fusion16/test_result/fusion/3_0_r.tif',real.astype(np.uint16))
+# cv2.imwrite('/data/yujsh/xiaoxiannv/fusion/test_result/fusion/3_0_p.tif',ls_rec.astype(np.uint16))
+# cv2.imwrite('/data/yujsh/xiaoxiannv/fusion/test_result/fusion/3_0_r.tif',real.astype(np.uint16))
 
 
 import cv2
 import numpy as np,sys
 
-A = cv2.imread('/data/yujsh/xiaoxiannv/fusion16/dataset16/0_7.tif',-1).astype(np.float64)
-B = cv2.imread('/data/yujsh/xiaoxiannv/fusion16/dataset16/0_5.tif',-1).astype(np.float64)
+A = cv2.imread('/data/yujsh/xiaoxiannv/fusion/dataset16/0_7.tif',-1).astype(np.float64)
+B = cv2.imread('/data/yujsh/xiaoxiannv/fusion/dataset16/0_5.tif',-1).astype(np.float64)
 
 # generate Gaussian pyramid for A
 G = A.copy()
@@ -111,5 +111,5 @@ for i in range(1,6):
 # image with direct connecting each half
 B= cv2.resize(B, A.shape[-2::-1])
 real = np.hstack((A[:,:cols//2],B[:,cols//2:]))
-cv2.imwrite('/data/yujsh/xiaoxiannv/fusion16/test_result/fusion/3_0_p.tif',ls_.astype(np.uint16))
-cv2.imwrite('/data/yujsh/xiaoxiannv/fusion16/test_result/fusion/3_0_r.tif',real.astype(np.uint16))
+cv2.imwrite('/data/yujsh/xiaoxiannv/fusion/test_result/fusion/3_0_p.tif',ls_.astype(np.uint16))
+cv2.imwrite('/data/yujsh/xiaoxiannv/fusion/test_result/fusion/3_0_r.tif',real.astype(np.uint16))

@@ -6,8 +6,8 @@ import cv2
 import numpy as np 
 from time import *
 load_image_start = time()
-imgA = cv2.imread("/data/yujsh/xiaoxiannv/fusion16/dataset16/3_7.tif",-1) #载入图片A
-imgB = cv2.imread("/data/yujsh/xiaoxiannv/fusion16/dataset16/3_5.tif",-1) #载入图片B
+imgA = cv2.imread("/data/yujsh/xiaoxiannv/fusion/dataset16/3_7.tif",-1) #载入图片A
+imgB = cv2.imread("/data/yujsh/xiaoxiannv/fusion/dataset16/3_5.tif",-1) #载入图片B
 load_image_end = time()
 print("load image time: ",load_image_end - load_image_start)
 #heigh, wide, channel = imgA.shape #获取图像的高、宽、通道数
@@ -132,6 +132,6 @@ fusion_end_time = time()
 print("fusion time: ", fusion_end_time - fusion_start_time)
 ######存图像
 write_start_time = time()
-cv2.imwrite("/data/yujsh/xiaoxiannv/fusion16/test_result/fusion1/fusion1_3.tif", reImgA.astype(np.uint16))
+cv2.imwrite("/data/yujsh/xiaoxiannv/fusion/test_result/fusion1/fusion1_3.tif", reImgA.astype(np.uint16))
 write_end_time = time()
 print('imwrite time: ',write_end_time - write_start_time)

@@ -1,6 +1,6 @@
 import logging
 import os, sys
-sys.path.append('/data/yujsh/xiaoxiannv/fusion16')
+sys.path.append('/data/yujsh/xiaoxiannv/fusion')
 
 import torch
 from torch.nn import DataParallel
@@ -35,7 +35,7 @@ batch_size = args.batch_size
 model_name = args.model_name
 
 
-data_path = '/data/yujsh/xiaoxiannv/fusion16/dataset/vif_dataset'
+data_path = '/data/yujsh/xiaoxiannv/fusion/dataset/vif_dataset'
 if not os.path.exists(data_path):
     log.error(f"data path {data_path} didn't exitis")
 

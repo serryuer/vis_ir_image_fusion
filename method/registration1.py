@@ -42,8 +42,8 @@ def siftImageAlignment(img1,img2):
    return imgOut,H,status
  
  
-img1 = cv2.imread("/data/yujsh/xiaoxiannv/fusion16/dataset16/0_7.tif")#,-1).astype(np.float16)
-img2 = cv2.imread("/data/yujsh/xiaoxiannv/fusion16/dataset16/0_7.tif")#,-1).astype(np.float16)
+img1 = cv2.imread("/data/yujsh/xiaoxiannv/fusion/dataset16/0_7.tif")#,-1).astype(np.float16)
+img2 = cv2.imread("/data/yujsh/xiaoxiannv/fusion/dataset16/0_7.tif")#,-1).astype(np.float16)
 # while img1.shape[0] >  1000 or img1.shape[1] >1000:
 #     img1 = cv2.resize(img1,None, fx=0.5,fy=0.5,interpolation = cv2.INTER_AREA)
 # while img2.shape[0] >  1000 or img2.shape[1] >1000:

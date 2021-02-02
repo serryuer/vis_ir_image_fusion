@@ -16,7 +16,9 @@ class TNODataset(Dataset):
     def __getitem__(self, item):
         img_v = Image.open(self.imgs_v[item])  # .convert('RGB')
         img_r = Image.open(self.imgs_r[item])  # .convert('RGB')
-
+        # if img_v.mode == 'RGB' or img_r.mode == 'RGB':
+                #     img_v = img_v.convert('L')
+                #     img_r = img_r.convert('L')
         img_v = self.loader(img_v)
         img_r = self.loader(img_r)
 

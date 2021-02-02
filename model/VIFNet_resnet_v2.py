@@ -5,7 +5,7 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import transforms
 import os, sys
-sys.path.append('/data/yujsh/xiaoxiannv/fusion16')
+sys.path.append('/data/yujsh/xiaoxiannv/fusion')
 from data_utils.TNODataset16 import TNODataset
 
 class ResidualBlock(nn.Module):

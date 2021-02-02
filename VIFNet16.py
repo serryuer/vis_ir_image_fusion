@@ -1,6 +1,6 @@
 import logging
 import os, sys
-sys.path.append('/data/yujsh/xiaoxiannv/fusion16')
+sys.path.append('/data/yujsh/xiaoxiannv/fusion')
 
 import torch
 from torch.nn import DataParallel
